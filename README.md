@@ -22,6 +22,10 @@ How long an algorithms will take to run
 
      Execution time of algorithms remains constant regardless of input size.
 
+#### O(n^2)
+
+     Execution time of algorithms grows quadratically with size of n.
+
 #### Space Complexity:
 
 How much memory it will need as the amount of data grows.
