@@ -26,6 +26,16 @@ How long an algorithms will take to run
 
      Execution time of algorithms grows quadratically with size of n.
 
+#### O(log n)
+
+     Execution time of algorithms grows logarithmically with size of n.
+
+     As the input size increases, the time it takes for algorithms to run increases slowly.
+
 #### Space Complexity:
 
 How much memory it will need as the amount of data grows.
+
+### Array DS
+
+An ordered collection of elements that can accessed using numeric index.
