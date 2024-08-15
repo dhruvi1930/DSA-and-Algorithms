@@ -39,3 +39,11 @@ How much memory it will need as the amount of data grows.
 ### Array DS
 
 An ordered collection of elements that can accessed using numeric index.
+
+### LinkedList
+
+A linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next.
+
+#### Singly LinkedList
+
+A type of linked list that is unidirectional, that is, it can be traversed in only one direction from head to the last node (tail)
