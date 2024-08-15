@@ -155,6 +155,18 @@ class LinkedList {
     this.length++;
     console.log(`Inserted node at index ${index} with value ${value}:`, this);
   }
+
+  getSize() {
+    return this.length;
+  }
+
+  clearLinkedList() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+
+    console.log("Cleared LinkedList", this);
+  }
 }
 
 const myLinkedList = new LinkedList("Dhruvi");
@@ -172,3 +184,6 @@ console.log("Get index 2 node:", myLinkedList.get(2));
 
 myLinkedList.set(2, "God");
 myLinkedList.insertNode(2, "Prachi");
+
+console.log("Length of the LinkedList", myLinkedList.getSize());
+myLinkedList.clearLinkedList();
