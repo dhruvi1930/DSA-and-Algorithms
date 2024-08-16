@@ -91,3 +91,21 @@ console.log(
   "Two Sum of array [2,7,11,15] and digit is 9:",
   twoSum([2, 7, 11, 15], 9)
 );
+
+const option2TwoSum = (array, digit) => {
+  let map = new Map();
+  for (let i = 0; i < array.length; i++) {
+    console.log(map.get(digit - array[i]));
+    if (map.get(digit - array[i]) !== undefined) {
+      return [i, map.get(digit - array[i])];
+    }
+    map.set(array[i], i);
+  }
+  return [];
+};
+
+console.log("---------------------------------------------");
+console.log(
+  "Two Sum of array [2,7,11,15] and digit is 9:",
+  option2TwoSum([2, 7, 11, 15], 9)
+);

@@ -47,3 +47,23 @@ A linear collection of data elements whose order is not given by their physical 
 #### Singly LinkedList
 
 A type of linked list that is unidirectional, that is, it can be traversed in only one direction from head to the last node (tail)
+
+#### Doubly LinkedList
+
+A bidirectional linked list; i.e., you can traverse it from head to tail node or tail to head node.
+
+### Stack
+
+A stack is a linear data structure that follows LIFO (Last In First Out)
+
+### Queue
+
+A queue is a linear data structure that functions like a waiting in lines and follows FIFO (First In First Out).
+
+##### Enqueue
+
+Adds an item from the back of the queue.
+
+#### Dequeue
+
+Removes an item from the front of the queue.

@@ -1,6 +1,6 @@
 class Node {
   constructor(value) {
-    this.value = value; // corrected to use 'value' property
+    this.value = value;
     this.next = null;
   }
 }
@@ -19,7 +19,6 @@ class LinkedList {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      // added 'else' to prevent adding 'newNode' twice
       this.tail.next = newNode;
       this.tail = newNode;
     }
@@ -167,23 +166,43 @@ class LinkedList {
 
     console.log("Cleared LinkedList", this);
   }
+
+  reverseList() {
+    let temp = this.head;
+    this.head = this.tail;
+    this.tail = temp;
+
+    let next = temp;
+    let prev = null;
+
+    for (let i = 0; i < this.length; i++) {
+      next = temp.next;
+      temp.next = prev;
+      prev = temp;
+
+      temp = next;
+    }
+
+    console.log("Reverse List:", this);
+  }
 }
 
 const myLinkedList = new LinkedList("Dhruvi");
 myLinkedList.push("Parth");
 myLinkedList.push("Jay");
 myLinkedList.push("Dev");
-myLinkedList.pop();
-myLinkedList.unshift("Prachi");
-myLinkedList.shift();
+// myLinkedList.pop();
+// myLinkedList.unshift("Prachi");
+// myLinkedList.shift();
 
-console.log("Full LinkedList:", myLinkedList);
-console.log("First Node:", myLinkedList.getFirst());
-console.log("Last Node:", myLinkedList.getLast());
-console.log("Get index 2 node:", myLinkedList.get(2));
+// console.log("Full LinkedList:", myLinkedList);
+// console.log("First Node:", myLinkedList.getFirst());
+// console.log("Last Node:", myLinkedList.getLast());
+// console.log("Get index 2 node:", myLinkedList.get(2));
 
-myLinkedList.set(2, "God");
-myLinkedList.insertNode(2, "Prachi");
+// myLinkedList.set(2, "God");
+// myLinkedList.insertNode(2, "Prachi");
 
-console.log("Length of the LinkedList", myLinkedList.getSize());
-myLinkedList.clearLinkedList();
+// console.log("Length of the LinkedList", myLinkedList.getSize());
+// myLinkedList.clearLinkedList();
+myLinkedList.reverseList();
