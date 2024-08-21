@@ -34,10 +34,29 @@ class Stack {
     this.length--;
     return temp;
   }
+
+  minStack() {
+    if (this.length === 0) {
+      return undefined;
+    }
+
+    let current = this.first;
+    let min = current.value;
+
+    while (current.next) {
+      current = current.next;
+      if (min > current.value) {
+        min = current.value;
+      }
+    }
+    return min;
+  }
 }
 
-const myStack = new Stack("Dhruvi");
-myStack.push("Parth");
-myStack.push("Dev");
+const myStack = new Stack(100);
+myStack.push(40);
+myStack.push(22);
+myStack.push(89);
 myStack.pop();
 console.log(myStack);
+console.log("Min value of stack", myStack.minStack());
